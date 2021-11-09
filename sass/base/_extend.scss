@@ -1,0 +1,20 @@
+%flexboxRow{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flexboxColumn{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+%presentacion{
+    background-image: url(/Image/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+}

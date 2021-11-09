@@ -1,0 +1,83 @@
+.gridContacto{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "informacion informacion"
+    "contacto ubicacion";
+
+    &__titulo{
+        grid-area: titulo;
+        margin: 1rem;
+    }
+
+    &__informacion{
+        grid-area: informacion;
+        margin: 3rem;
+
+        &__listas{
+            list-style: square inside;
+        }
+    }
+
+    &__contacto{
+        grid-area: contacto;
+        color: black;
+        margin: 1rem;
+        @extend %flexboxColumn;
+    }
+
+    .formulario{
+        @extend %flexboxColumn;
+        margin: 1rem 0;
+        background-color: $colorSecundario;
+    
+        &__label{
+            display: block;
+            text-align: left;
+            width: 18rem;
+            color: $colorTexto;
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+        }
+    
+        &__input{
+            background-color: $colorSecundario;
+            border: none;
+            border-bottom: dotted 3px #ffffff;
+            color: #ffffff;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 1rem;
+            resize: none;
+    
+            &:focus{
+                outline: none;
+            }
+    
+            &[type="submit"], .formulario__input[type="reset"]{
+                margin-top: 1.5rem;
+                padding: 0.4rem;
+                background-color: #5C442A;
+                color: #ffffff;
+                border-radius: 0.5rem 0 0.5rem 0;
+                cursor: pointer;
+                border: none;
+                width: 7rem;
+                font-size: 0.8rem;
+            }
+    
+            &[type="submit"]:hover{
+                background-color: #a5743c;
+            }
+        }
+    }
+
+    &__ubicacion{
+        grid-area: ubicacion;
+
+        &__iframe{
+            width: 600px;
+            height: 450px;
+            padding: 1rem;
+        }
+    }
+}

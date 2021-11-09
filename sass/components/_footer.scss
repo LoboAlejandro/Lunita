@@ -1,0 +1,28 @@
+.footer{
+    background-color: map-get($colorFooterMaps, footerBackground);
+    height: auto;
+    color: map-get($colorFooterMaps, footerTexto);
+    padding: 1rem 1rem 0 1rem;
+    @extend %flexboxRow;
+
+    &__social__lista, .footer__social__anchor{
+        text-decoration: none;
+        list-style: none;
+        color: map-get($colorFooterMaps, footerTexto);
+        display: inline;
+        margin: 0.1rem;
+    }
+
+    &__copyright{
+        text-align: center;
+
+        &__logo{
+            width: 4rem;
+        }
+    }
+
+    &__portfolio{
+        text-decoration: none;
+        color: map-get($colorFooterMaps, footerTexto);
+    }
+}

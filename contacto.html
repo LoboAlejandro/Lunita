@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximun-scale=5.0">
+    <!--Meta Etiquetas-->
+    <meta name="description" content="Emprendimiento familiar de venta de accesorios 'Lunita'. Como consultar, contactarnos o ubicarnos">
+    <meta name="keywords" content="Accesorios, accesorio, emprendimiento familiar, venta, mayor, menor, nosotros, moderno, productos, novedades, contacto, formulario, como contactarnos, consultas, ubicacion, mapa, atencion al cliente">
+    <!--Open Graph-->
+    <meta property="og:title" content="Tienda de accesorios">
+    <meta property="og:description" content="Emprendimiento familiar de venta de accesorios 'Lunita'. Fundado en 2020 en plena pandemia. Nos especializamos en creación de productos para la moda e incluimos envio para toda la república Argentina">
+    <meta property="og:image" content="">
+    <meta property="og:author" content="Alejandro Lobo">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/0eb3592e5d.js" crossorigin="anonymous"></script>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--favicon-->
+    <link rel="shortcut icon" href="Image/logoFavicon.jpg" type="image/x-icon"/>
+
+
+    <title>Lunita Accesorios - Contacto</title> <!--Titulo pestaña-->
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg header">
+        <nav class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="index.html" title="link a Pagina Principal">
+                    <img class="header__logoHeader" src="image/logo.jpg" alt="Imagen de una luna que dice 'lunita" loading="lazy">
+                </a>
+            </div>
+            <div>
+                <button class="navbar-toggler header__hamburguesa" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav header__ul">
+                        <li class="header__item">
+                            <a class="header__anchor" href="index.html" title="link a Pagina Principal">Inicio</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__anchor" href="index.html#nosotros" title="link a Pagina Principal seccion Nosotros">Nosotros</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__anchor" href="index.html#novedades" title="link a Pagina principal Seccion Novedades">Novedades</a>
+                        </li>
+                        <li class="dropdown header__item header__item--submenu">
+                            <a class="dropdown-toggle header__anchor" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Abrir submenu">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu header__submenu__ul" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item header__submenu__li" href="productos.html" title="link a Pagina Productos seccion Cubrebocas">Cubrebocas</a></li>
+                                <li><a class="dropdown-item header__submenu__li" href="productos.html#moños" title="link a Pagina Productos seccion Moños">Moños</a></li>
+                                <li><a class="dropdown-item header__submenu__li" href="productos.html#scrunchies" title="link a Pagina Productos seccion Scrunchies">Scrunchies</a></li>
+                                <li><a class="dropdown-item header__submenu__li" href="productos.html#aros" title="link a Pagina Productos seccion Aros">Aros</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__anchor header__item--active" aria-current="page" href="contacto.html" title="link a Pagina Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="gridContacto"> <!--Main-->
+        <h1 class="gridContacto__titulo">¡Encontranos o Contactanos!</h1>
+        <section class="gridContacto__informacion">
+            <h2>Información:</h2>
+            <ul class="gridContacto__informacion__listas">
+                <li>Somos de burzaco / Puntos de entrega</li>
+                <li>Efectivo, mercado pago y transferencias</li>
+                <li>Ventas por mayor y Menor (Compra mínima ARS$1500)</li>
+            </ul>
+        </section>
+        <section class="gridContacto__contacto">
+            <h2>Contactanos:</h2>
+            <p>Dejanos tu consulta completando el siguiente formulario:</p>
+            <form class="formulario" action="archivo.php"  method="POST">
+                <label class="formulario__label" for="nombre">Nombre:
+                    <input class="formulario__input" type="text" name="nombre" placeholder="Nombre/s" required>
+                </label>
+                <label class="formulario__label" for="apellido">Apellido:
+                    <input class="formulario__input" type="text" name="apellido" placeholder="Apellido/s" required>
+                </label>
+                <label class="formulario__label" for="email">E-Mail:
+                    <input class="formulario__input" type="email" name="email" placeholder="ejemplo@hotmail.com" required>
+                </label>
+                <label class="formulario__label" for="opcion">Motivo:
+                    <select name="opcion" id="">
+                        <option value=""></option>
+                        <option value="">Venta por Mayor</option>
+                        <option value="">Venta por Menor</option>
+                        <option value="">Otro</option>
+                    </select>
+                </label>
+                <label class="formulario__label" for="newsletter">Deseo recibir el Newsletter:
+                    <input class="formulario__input" type="checkbox" name="newsletter">
+                </label>
+                <label class="formulario__label" for="consulta">Consultas:
+                    <textarea class="formulario__input" name="consulta" placeholder="Escriba su consulta..."></textarea>
+                </label>
+                <label class="formulario__label">
+                    <input class="formulario__input" type="reset" value="Limpiar Formulario">
+                    <input class="formulario__input" type="submit">
+                </label>
+            </form>
+        </section>
+        <section class="gridContacto__ubicacion">
+            <h2>Ubicación:</h2>
+            <iframe class="gridContacto__ubicacion__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9263.940916258038!2d-58.39259914409935!3d-34.823614801051995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd4a17e9884bf%3A0x576ec433169a1441!2sBurzaco!5e0!3m2!1ses-419!2sar!4v1634513653679!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+    <footer class="footer"> <!--Footer-->
+        <section class="footer__social"> <!--Redes Sociales-->
+            <h4>Encontranos en:</h4>
+            <ul>
+                <li class="footer__social__lista">
+                    <a class="footer__social__anchor" href="https://www.instagram.com" target="_blank" title="link a Instagram">
+                        <i class="fab fa-instagram"></i>Instagram
+                    </a>
+                </li>
+                <li class="footer__social__lista">
+                    <a class="footer__social__anchor" href="https://www.whatsapp.com" target="_blank" title="link a Whatsapp">
+                        <i class="fab fa-whatsapp"></i>WhatsApp
+                    </a>
+                </li>
+                <li class="footer__social__lista">
+                    <a class="footer__social__anchor" href="https://www.facebook.com" target="_blank" title="link a Facebook">
+                        <i class="fab fa-facebook-square"></i>Facebook
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="footer__copyright"> <!--Logo del Emprendimiento y Copyright-->
+            <a href="index.html" title="link a pagina principal">
+                <img class="footer__copyright__logo" src="Image/logo.jpg" alt="Imagen de una luna que dice 'lunita'" loading="lazy">
+            </a>
+            <p>Copyright© Lunita 2021. Todos los derechos reservados.</p>
+        </section>
+        <section> <!--Logo del Desarrollador y link al Portfolio-->
+            <a class="footer__portfolio" href="https://www.linkedin.com/in/alejandro-lobo-2195ab212/" target="_blank" title="link a LinkedIn del desarrollador">
+                <i class="fab fa-linkedin"></i>By Lobo alejandro <!--El más crack-->
+            </a>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
