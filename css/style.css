@@ -11,7 +11,7 @@
   align-items: center; }
 
 .presentacion {
-  background-image: url(/Image/banner.jpg);
+  background-image: url(../Image/banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
