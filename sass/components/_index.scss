@@ -16,7 +16,7 @@
 
     &__articulo{
         background-color: $colorSecundario;
-        width: 90%;
+        width: 90vw;
         margin: 1% 0;
         padding: 1rem;
         text-align: left;
@@ -44,8 +44,12 @@
         transition: all 1s;
     
         &:hover{
-            transform: scale(1.2, 1.2);
+            transform: scale(1.1, 1.1);
         }
+    }
+    
+    &__anchor{
+        @extend %destacadosAnchor;
     }
 }
 
@@ -53,7 +57,7 @@
     display: grid;
     grid-template-areas:
     "titulo titulo"
-    "span span"
+    "subtitulo subtitulo"
     "texto imagen";
     padding: 2rem;
 
@@ -61,17 +65,17 @@
         grid-area: titulo;
     }
 
-    &__texto{
-        text-align: left;
+    &__text{
         font-size: 1.2rem;
+        text-align: left;
         grid-area: texto;
+    }
 
-        &--citado{
-            font-style: italic;
-            font-size: 1.8rem;
-            text-align: center;
-            grid-area: span;
-        }
+    &__span{
+        font-style: italic;
+        font-size: 1.8rem;
+        text-align: center;
+        grid-area: subtitulo;
     }
 
     &__imagen{

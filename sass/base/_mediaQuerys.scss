@@ -11,7 +11,7 @@
     .nosotros{
         grid-template-areas: 
         "titulo"
-        "span"
+        "subtitulo"
         "texto"
         "imagen";
         padding: 2rem;
@@ -40,6 +40,15 @@
 
         &__titulo{
             background-color: #e7d8c09d;
+        }
+    }
+    .gridContacto{
+        &__informacion{
+            &--articulo{
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+            }
         }
     }
 

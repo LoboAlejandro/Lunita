@@ -17,6 +17,11 @@
   background-attachment: fixed;
   background-position: top center; }
 
+.destacados__anchor {
+  text-decoration: none;
+  font-style: italic;
+  color: #ffffff; }
+
 * {
   font-family: 'Titillium Web', sans-serif;
   margin: 0;
@@ -104,7 +109,7 @@ main p {
   margin: 1rem; }
   .destacados__articulo {
     background-color: #DBA264;
-    width: 90%;
+    width: 90vw;
     margin: 1% 0;
     padding: 1rem;
     text-align: left;
@@ -123,23 +128,23 @@ main p {
     box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.55);
     transition: all 1s; }
     .destacados__imagen:hover {
-      transform: scale(1.2, 1.2); }
+      transform: scale(1.1, 1.1); }
 
 .nosotros {
   display: grid;
-  grid-template-areas: "titulo titulo" "span span" "texto imagen";
+  grid-template-areas: "titulo titulo" "subtitulo subtitulo" "texto imagen";
   padding: 2rem; }
   .nosotros__titulo {
     grid-area: titulo; }
-  .nosotros__texto {
-    text-align: left;
+  .nosotros__text {
     font-size: 1.2rem;
+    text-align: left;
     grid-area: texto; }
-    .nosotros__texto--citado {
-      font-style: italic;
-      font-size: 1.8rem;
-      text-align: center;
-      grid-area: span; }
+  .nosotros__span {
+    font-style: italic;
+    font-size: 1.8rem;
+    text-align: center;
+    grid-area: subtitulo; }
   .nosotros__imagen {
     grid-area: imagen;
     justify-content: center; }
@@ -159,12 +164,19 @@ main p {
 .gridContacto {
   display: grid;
   grid-template-areas: "titulo titulo" "informacion informacion" "contacto ubicacion"; }
+  .gridContacto__imagen {
+    width: 15rem; }
   .gridContacto__titulo {
     grid-area: titulo;
     margin: 1rem; }
   .gridContacto__informacion {
     grid-area: informacion;
     margin: 3rem; }
+    .gridContacto__informacion--articulo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row-reverse; }
     .gridContacto__informacion__listas {
       list-style: square inside; }
   .gridContacto__contacto {
@@ -234,7 +246,7 @@ main p {
     display: grid;
     grid-template-areas: "titulo" "informacion" "ubicacion" "contacto"; }
   .nosotros {
-    grid-template-areas: "titulo" "span" "texto" "imagen";
+    grid-template-areas: "titulo" "subtitulo" "texto" "imagen";
     padding: 2rem; } }
 
 @media only screen and (max-width: 890px) {
@@ -250,6 +262,10 @@ main p {
     height: 70vh; }
     .presentacion__titulo {
       background-color: #e7d8c09d; }
+  .gridContacto__informacion--articulo {
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
   .footer {
     flex-flow: column wrap; } }
 

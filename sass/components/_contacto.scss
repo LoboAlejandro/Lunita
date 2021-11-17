@@ -5,6 +5,10 @@
     "informacion informacion"
     "contacto ubicacion";
 
+    &__imagen{
+        width: 15rem;
+    }
+
     &__titulo{
         grid-area: titulo;
         margin: 1rem;
@@ -13,6 +17,13 @@
     &__informacion{
         grid-area: informacion;
         margin: 3rem;
+
+        &--articulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
 
         &__listas{
             list-style: square inside;

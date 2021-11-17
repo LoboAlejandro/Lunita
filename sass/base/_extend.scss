@@ -18,3 +18,9 @@
     background-attachment: fixed;
     background-position: top center;
 }
+
+%destacadosAnchor{
+    text-decoration: none;
+    font-style: italic;
+    color: $colorTexto;
+}
