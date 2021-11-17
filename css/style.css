@@ -110,15 +110,17 @@ main p {
   .destacados__articulo {
     background-color: #DBA264;
     width: 90vw;
-    margin: 1% 0;
+    margin: 1rem 0;
     padding: 1rem;
     text-align: left;
-    display: flex; }
+    display: flex;
+    border-radius: 0 2rem 0 2rem; }
     .destacados__articulo__lista {
-      list-style: square inside; }
+      list-style: none; }
   .destacados__derecha {
     align-self: flex-end;
-    flex-flow: row-reverse nowrap; }
+    flex-flow: row-reverse nowrap;
+    border-radius: 2rem 0 2rem 0; }
     .destacados__derecha__texto {
       text-align: right; }
   .destacados__imagen {
@@ -185,7 +187,8 @@ main p {
     margin: 1rem; }
   .gridContacto .formulario {
     margin: 1rem 0;
-    background-color: #DBA264; }
+    background-color: #DBA264;
+    border-radius: 1.5rem 0 1.5rem 0; }
     .gridContacto .formulario__label {
       display: block;
       text-align: left;
@@ -226,7 +229,7 @@ main p {
   background-color: #5C5146;
   height: auto;
   color: #ffffff;
-  padding: 1rem 1rem 0 1rem; }
+  padding: 1rem; }
   .footer__social__lista, .footer .footer__social__anchor {
     text-decoration: none;
     list-style: none;

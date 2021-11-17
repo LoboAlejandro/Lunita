@@ -17,19 +17,21 @@
     &__articulo{
         background-color: $colorSecundario;
         width: 90vw;
-        margin: 1% 0;
+        margin: 1rem 0;
         padding: 1rem;
         text-align: left;
         display: flex;
+        border-radius: 0 2rem 0 2rem;
 
         &__lista{
-            list-style: square inside;
+            list-style: none;
         }
     }
 
     &__derecha{
         align-self: flex-end;
         flex-flow: row-reverse nowrap;
+        border-radius: 2rem 0 2rem 0;
 
         &__texto{
             text-align: right;
