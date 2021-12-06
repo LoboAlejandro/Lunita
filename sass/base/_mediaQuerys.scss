@@ -18,7 +18,8 @@
     }
 }
 
-@media only screen and (max-width: 890px){
+@media only screen and (max-width: 890px) {
+
     h1{
         font-size: 2.8rem;
     }
@@ -54,6 +55,78 @@
 
     .footer{
         flex-flow: column wrap;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .header{
+        height: fit-content;
+
+        &__logoHeader{
+            width: 5rem;
+        }
+
+        &__navBar{
+            width: 100%;
+            position: fixed;
+            top: 4.65rem;
+            left: 0;
+            background: $colorHeader;
+            text-align: center;
+            transition: all .5s;
+            display: none;
+            justify-content: center;
+
+            &__ul{
+                animation: submenu;
+                animation-timing-function: ease-in-out;
+                animation-duration: 120ms;
+            }
+
+            &__item{
+                display: none;
+                transition: all 3s;
+            }
+
+            &__anchor{
+                color: &colorTexto;
+                font-size: 1.6rem;
+
+                &:active, &:hover{
+                    color: $colorSecundario;
+                    transition: .3s;
+                }
+            }
+        }
+
+        .bar-btn{
+            display: inherit;
+            font-size: 2rem;
+            color: $colorTexto;
+            margin-right: 1rem;
+            cursor: pointer;
+            transition: transform ease 120ms;
+        }
+
+        .bar-btn i{
+            transition: all 120ms;
+        }
+
+        #check:checked ~ .bar-btn i{
+            transform: rotateZ(90deg);
+        }
+
+        #check:checked ~ ul{
+            display: flex;
+        }
+
+        #check:checked ~ .header__navBar{
+            display: inherit;
+        }
+
+        #check:checked ~ .header__navBar li{
+            display: block;
+        }
     }
 }
 
@@ -114,6 +187,7 @@
 
     .gridContacto{
         &__ubicacion{
+            
             &__iframe{
                 width: 300px;
                 height: 215px;

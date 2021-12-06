@@ -25,7 +25,10 @@
 * {
   font-family: 'Titillium Web', sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box; }
 
 body {
   background: #E1C7AB; }
@@ -62,33 +65,35 @@ main p {
   top: 0;
   border-radius: 3px;
   z-index: 10; }
-  .header__logoHeader {
-    width: 5.5rem;
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 5px; }
-  .header__ul {
+  .header .logoHeader {
+    margin: 0; }
+    .header .logoHeader__img {
+      width: 5.6rem;
+      box-sizing: border-box;
+      border-radius: 5px; }
+  .header__navBar__ul {
     margin: 0.6rem; }
-  .header__anchor {
+  .header__navBar__item {
+    display: inline;
+    margin: 0.35rem; }
+  .header__navBar__anchor {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.5rem;
     transition: all 300ms; }
-    .header__anchor:hover {
+    .header__navBar__anchor:hover {
       color: #DBA264; }
-  .header__item {
-    margin: 0.5rem; }
-    .header__item:hover .header__submenu__ul {
-      display: block; }
-    .header__item--active {
-      color: #DBA264; }
-  .header__hamburguesa {
-    background-color: #ffffff; }
-  .header__submenu__ul {
-    background-color: #e1b997f1;
-    animation: submenu;
-    animation-timing-function: ease-in-out;
-    animation-duration: 300ms; }
+  .header__navBar .linkActive {
+    color: #DBA264; }
+  .header__navBar .submenu {
+    position: relative; }
+    .header__navBar .submenu__ul {
+      animation: submenu;
+      animation-timing-function: ease-in-out;
+      animation-duration: 120ms;
+      background-color: #e1b997f1; }
+  .header #check, .header .bar-btn {
+    display: none; }
 
 @keyframes submenu {
   from {
@@ -202,11 +207,21 @@ main p {
       border-bottom: dotted 3px #ffffff;
       color: #ffffff;
       font-family: 'Titillium Web', sans-serif;
-      font-size: 1rem;
-      resize: none; }
+      font-size: 1rem; }
+      .gridContacto .formulario__input--consulta {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 7px;
+        border-bottom: dotted 3px #5c442ade;
+        color: #000000;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 1rem;
+        resize: none;
+        width: 15rem;
+        height: 5rem; }
       .gridContacto .formulario__input:focus {
         outline: none; }
-      .gridContacto .formulario__input[type="submit"], .gridContacto .formulario__input .formulario__input[type="reset"] {
+      .gridContacto .formulario__input[type="submit"], .gridContacto .formulario__input[type="reset"] {
         margin-top: 1.5rem;
         padding: 0.4rem;
         background-color: #5C442A;
@@ -219,7 +234,8 @@ main p {
       .gridContacto .formulario__input[type="submit"]:hover {
         background-color: #a5743c; }
   .gridContacto__ubicacion {
-    grid-area: ubicacion; }
+    grid-area: ubicacion;
+    width: 320px; }
     .gridContacto__ubicacion__iframe {
       width: 600px;
       height: 450px;
@@ -229,7 +245,7 @@ main p {
   background-color: #5C5146;
   height: auto;
   color: #ffffff;
-  padding: 1rem; }
+  padding: 1rem 1rem 0 1rem; }
   .footer__social__lista, .footer .footer__social__anchor {
     text-decoration: none;
     list-style: none;
@@ -271,6 +287,52 @@ main p {
     align-items: center; }
   .footer {
     flex-flow: column wrap; } }
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: fit-content; }
+    .header__logoHeader {
+      width: 5rem; }
+    .header__navBar {
+      width: 100%;
+      position: fixed;
+      top: 4.65rem;
+      left: 0;
+      background: #5c442ade;
+      text-align: center;
+      transition: all .5s;
+      display: none;
+      justify-content: center; }
+      .header__navBar__ul {
+        animation: submenu;
+        animation-timing-function: ease-in-out;
+        animation-duration: 120ms; }
+      .header__navBar__item {
+        display: none;
+        transition: all 3s; }
+      .header__navBar__anchor {
+        color: .header__navBar__anchor colorTexto;
+        font-size: 1.6rem; }
+        .header__navBar__anchor:active, .header__navBar__anchor:hover {
+          color: #DBA264;
+          transition: .3s; }
+    .header .bar-btn {
+      display: inherit;
+      font-size: 2rem;
+      color: #ffffff;
+      margin-right: 1rem;
+      cursor: pointer;
+      transition: transform ease 120ms; }
+    .header .bar-btn i {
+      transition: all 120ms; }
+    .header #check:checked ~ .bar-btn i {
+      transform: rotateZ(90deg); }
+    .header #check:checked ~ ul {
+      display: flex; }
+    .header #check:checked ~ .header__navBar {
+      display: inherit; }
+    .header #check:checked ~ .header__navBar li {
+      display: block; } }
 
 @media only screen and (max-width: 650px) {
   .header__logoHeader {

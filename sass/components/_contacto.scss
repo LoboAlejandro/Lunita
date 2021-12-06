@@ -59,13 +59,25 @@
             color: #ffffff;
             font-family: 'Titillium Web', sans-serif;
             font-size: 1rem;
-            resize: none;
+
+            &--consulta{
+                background-color: #ffffff;
+                border: none;
+                border-radius: 7px;
+                border-bottom: dotted 3px $colorHeader;
+                color: #000000;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 1rem;
+                resize: none;
+                width: 15rem;
+                height: 5rem;
+            }
     
             &:focus{
                 outline: none;
             }
     
-            &[type="submit"], .formulario__input[type="reset"]{
+            &[type="submit"], &[type="reset"]{
                 margin-top: 1.5rem;
                 padding: 0.4rem;
                 background-color: #5C442A;
@@ -85,6 +97,7 @@
 
     &__ubicacion{
         grid-area: ubicacion;
+        width: 320px;
 
         &__iframe{
             width: 600px;

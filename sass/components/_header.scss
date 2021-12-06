@@ -2,58 +2,64 @@
     background-color: $colorHeader;
     @extend %flexboxRow;
     position: sticky;
-    padding:0.3rem;
+    padding: 0.3rem;
     top: 0;
     border-radius: 3px;
     z-index: 10;
 
-    &__logoHeader{
-        width: 5.5rem;
+    .logoHeader{
         margin: 0;
-        box-sizing: border-box;
-        border-radius: 5px;
+
+        &__img{
+            width: 5.6rem;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
     }
 
-    &__ul{
-        margin: 0.6rem;
-    }
+    &__navBar{
+        &__ul{
+            margin: 0.6rem;
+        }
 
-    &__anchor{
-        color: $colorTexto;
-        text-decoration: none;
-        font-size: 1.5rem;
-        transition: all 300ms;
+        &__item{
+            display: inline;
+            margin: 0.35rem;
+        }
 
-        &:hover{
+        &__anchor{
+            color: $colorTexto;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 300ms;
+
+            &:hover{
+                color: $colorSecundario;
+            }
+        }
+
+        .linkActive{
             color: $colorSecundario;
         }
-    }
-    
-    &__item{
-        margin: 0.5rem;
 
-        &:hover .header__submenu__ul{
-            display: block;
+        .submenu{
+            position: relative;
+
+            &__ul{
+                animation: submenu;
+                animation-timing-function: ease-in-out;
+                animation-duration: 120ms;
+                background-color: #e1b997f1;
+            }
         }
-
-        &--active{
-            color: $colorSecundario;
-        }
-    }
-
-    &__hamburguesa{
-        background-color: $colorTexto;
     }
 
-    &__submenu__ul{
-        background-color: #e1b997f1;
-        animation: submenu;
-        animation-timing-function: ease-in-out;
-        animation-duration: 300ms;
+    #check, .bar-btn{
+        display: none;
+    }
 
-        @keyframes submenu{
-            from{height: 0;}
-            to{height: 9rem;}
-        }
+    @keyframes submenu{
+        from{height: 0;}
+        to{height: 9rem;}
     }
 }

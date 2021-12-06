@@ -2,7 +2,7 @@
     background-color: map-get($colorFooterMaps, footerBackground);
     height: auto;
     color: map-get($colorFooterMaps, footerTexto);
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
     @extend %flexboxRow;
 
     &__social__lista, .footer__social__anchor{
