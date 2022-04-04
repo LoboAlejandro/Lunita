@@ -1,2 +1,2 @@
 # Lunita
-Proyecto realizado en clase
+Proyecto final de CoderHouse, hecho con HTML, CSS, SASS, BOOTSTRAP
